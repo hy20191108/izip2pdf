@@ -3,17 +3,16 @@
 import io
 import os
 import sys
-import warnings
 import zipfile
 
-import img2pdf
+import img2pdf  # type: ignore[import-untyped]
 
 # pillow plugin
-import pillow_avif  # type: ignore[import-unused]
-import tqdm
+import pillow_avif  # type: ignore[import-untyped]
+import tqdm  # type: ignore[import-untyped]
 from natsort import natsorted
 from PIL import Image, ImageFile, ImageOps
-from pillow_heif import register_heif_opener
+from pillow_heif import register_heif_opener  # type: ignore[import-untyped]
 
 register_heif_opener()
 ImageFile.LOAD_TRUNCATED_IMAGES = True
@@ -99,9 +98,6 @@ def check_zip(zip_io):
                 stream.close()
             except KeyboardInterrupt:
                 exit()
-            except:
-                warnings.warn(f"{name} is not image file!")
-                continue
 
             new_z.writestr(name, binary)
     return new_io
@@ -218,10 +214,6 @@ def main():
             convert(zippath, pdfpath, progress=True)
         except KeyboardInterrupt:
             exit()
-        except:
-            import traceback
-
-            traceback.print_exc()
 
 
 if __name__ == "__main__":
