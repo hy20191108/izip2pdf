@@ -50,7 +50,6 @@ with open("input.zip", "rb") as f:
 pdf_bin = izip2pdf.convert(zip_bin)
 with open("output.pdf", "wb") as f:
     f.write(pdf_bin)
-
 ```
 
 
