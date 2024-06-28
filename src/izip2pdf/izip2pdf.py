@@ -155,7 +155,7 @@ def convert(zip_any, pdfpath=None, progress=True) -> bytes:
         namelist = list(natsorted(z.namelist()))
 
         if progress:
-            namelist = tqdm.tqdm(namelist, desc="zip2pdf")
+            namelist = tqdm.tqdm(namelist, desc="izip2pdf")
 
         for name in namelist:
             tqdm.tqdm.write(name)

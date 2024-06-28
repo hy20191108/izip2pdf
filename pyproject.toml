@@ -17,7 +17,7 @@ readme = "README.md"
 requires-python = ">= 3.8"
 
 [project.scripts]
-zip2pdf = "zip2pdf.zip2pdf:main"
+izip2pdf = "izip2pdf.izip2pdf:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -31,4 +31,4 @@ dev-dependencies = []
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/zip2pdf"]
+packages = ["src/izip2pdf"]
