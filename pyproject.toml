@@ -1,19 +1,17 @@
 [project]
-name = "zip2pdf"
-version = "0.1.0"
-description = "Add your description here"
+name = "izip2pdf"
+version = "0.1.1"
+description = "convert zip file including image to pdf file"
 authors = [
-    { name = "hy", email = "zwwp9976@gmail.com" }
+    { name = "Yoshioka", email = "zwwp9976@gmail.com" }
 ]
 dependencies = [
-    "ruff>=0.4.10",
     "img2pdf>=0.5.1",
     "tqdm>=4.66.4",
-    "natsort>=8.4.0",
+    "natsort>=6.2.0",
     "pillow>=10.3.0",
     "pillow-avif-plugin>=1.4.3",
     "pillow-heif>=0.16.0",
-    "twine>=5.1.1",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"

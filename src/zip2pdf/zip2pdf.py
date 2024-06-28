@@ -8,7 +8,7 @@ import zipfile
 import img2pdf  # type: ignore[import-untyped]
 
 # pillow plugin
-import pillow_avif  # type: ignore[import-untyped]
+import pillow_avif  # type: ignore[import-untyped]  # noqa: F401
 import tqdm  # type: ignore[import-untyped]
 from natsort import natsorted
 from PIL import Image, ImageFile, ImageOps
@@ -137,7 +137,7 @@ def is_jpg(filepath):
     return False
 
 
-def convert(zip_any, pdfpath=None, progress=True):
+def convert(zip_any, pdfpath=None, progress=True) -> bytes:
     if isinstance(zip_any, bytes):
         zipbytes = zip_any
     else:
@@ -182,29 +182,7 @@ def convert(zip_any, pdfpath=None, progress=True):
     return pdfbytes
 
 
-def test():
-    with open("input.zip", "rb") as f:
-        zip_bin = f.read()
-
-    convert("input.zip", "output1.pdf")
-    convert(zip_bin, "output2.pdf")
-
-    with open("output3.pdf", "wb") as f:
-        f.write(convert("input.zip"))
-
-    with open("output4.pdf", "wb") as f:
-        f.write(convert(zip_bin))
-
-    # testcase
-    convert("input2.zip", "output5.pdf")
-    convert("input3.zip", "output6.pdf")
-    convert("input4.zip", "output7.pdf")
-    convert("input5.zip", "output8.pdf")  # 16s
-    convert("input6.zip", "output9.pdf")
-    convert("input7.zip", "output10.pdf")
-
-
-def main():
+def main() -> None:
     for zippath in tqdm.tqdm(sys.argv[1:], desc="process"):
         tqdm.tqdm.write(zippath)
         pdfpath = os.path.splitext(zippath)[0] + ".pdf"
