@@ -3,6 +3,10 @@ izip2pdf (image zip to pdf)
 This library convert zip file containing image file to pdf file.
 - fast convert
 - pdf page width is same
+- This library convert on memory, not use tmp folder.
+
+Support image format in zip
+- jpeg, jpeg2000, png,  webp, avif, heif, psd, tiff, etc.
 
 Usage
 -----
@@ -22,7 +26,7 @@ Installation
 
 If you want to install, you can run:
 
-	$ pip3 install izip2pdf
+	$ pip install izip2pdf
 
 Library
 -------
