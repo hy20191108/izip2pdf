@@ -1,1 +1,1 @@
-# zip2pdf
+# izip2pdf
