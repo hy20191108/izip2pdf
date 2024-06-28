@@ -1,6 +1,6 @@
 [project]
 name = "izip2pdf"
-version = "0.1.5"
+version = "0.1.6"
 description = "convert zip file including image to pdf file"
 authors = [
     { name = "Yoshioka", email = "zwwp9976@gmail.com" }
@@ -34,4 +34,4 @@ allow-direct-references = true
 packages = ["src/izip2pdf"]
 
 [project.urls]
-Homepage = "https://github.com/pypa/sampleproject"
+Homepage = "https://github.com/hy20191108/izip2pdf"
