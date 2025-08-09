@@ -1,2 +1,3 @@
-def hello() -> str:
-    return "Hello from izip2pdf!"
+from .izip2pdf import convert  # re-export for top-level API
+
+__all__ = ["convert"]
