@@ -7,20 +7,30 @@
 #   all-features: false
 #   with-sources: false
 #   generate-hashes: false
+#   universal: false
 
 -e file:.
 colorama==0.4.6
+    # via pytest
     # via tqdm
 deprecated==1.2.14
     # via pikepdf
 img2pdf==0.5.1
     # via izip2pdf
+iniconfig==2.3.0
+    # via pytest
 lxml==5.2.2
     # via pikepdf
+mypy==1.18.2
+mypy-extensions==1.1.0
+    # via mypy
 natsort==8.4.0
     # via izip2pdf
 packaging==24.1
     # via pikepdf
+    # via pytest
+pathspec==0.12.1
+    # via mypy
 pikepdf==9.0.0
     # via img2pdf
 pillow==10.3.0
@@ -32,7 +42,15 @@ pillow-avif-plugin==1.4.3
     # via izip2pdf
 pillow-heif==0.16.0
     # via izip2pdf
+pluggy==1.6.0
+    # via pytest
+pygments==2.19.2
+    # via pytest
+pytest==9.0.1
+ruff==0.14.6
 tqdm==4.66.4
     # via izip2pdf
+typing-extensions==4.15.0
+    # via mypy
 wrapt==1.16.0
     # via deprecated

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rye run ruff check:*)",
+      "Bash(rye run python:*)",
+      "Bash(rye run mypy:*)",
+      "Bash(rye run pytest:*)",
+      "Bash(python -m pytest tests/ -v)",
+      "Bash(python -m mypy:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
