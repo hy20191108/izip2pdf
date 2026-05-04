@@ -166,9 +166,11 @@ def to_jpeg_bytes(
 ) -> bytes:
     """Convert one image's bytes into JPEG bytes ready for PDF embedding.
 
-    A pure function: no global state, no I/O, no Pillow safety mutation.
-    Wrap the call in `configure_pillow_safety(...)` if needed.
+    Calls `_ensure_format_support()` to register HEIF/AVIF Pillow plugins on
+    first invocation (idempotent). Wrap the call in `configure_pillow_safety(...)`
+    when stricter Pillow safety limits are required.
     """
+    _ensure_format_support()
     output = io.BytesIO()
     with Image.open(io.BytesIO(image_bytes)) as image:
         w, h = image.size
