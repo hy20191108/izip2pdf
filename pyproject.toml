@@ -1,6 +1,6 @@
 [project]
 name = "izip2pdf"
-version = "0.1.9"
+version = "0.2.0"
 description = "convert zip file including image to pdf file"
 authors = [{ name = "hy20191108", email = "zwwp9976@gmail.com" }]
 dependencies = [
@@ -34,6 +34,11 @@ allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/izip2pdf"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
 
 [project.urls]
 Homepage = "https://github.com/hy20191108/izip2pdf"
