@@ -1,6 +1,6 @@
 [project]
 name = "izip2pdf"
-version = "0.2.0"
+version = "0.2.1"
 description = "convert zip file including image to pdf file"
 authors = [{ name = "hy20191108", email = "zwwp9976@gmail.com" }]
 dependencies = [
